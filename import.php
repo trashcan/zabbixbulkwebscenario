@@ -1,6 +1,6 @@
 #!/usr/bin/php
 <?php
-define('URL', 'http://managed.codero.com/zabbix/api_jsonrpc.php');
+define('URL', 'http://somedomain/zabbix/api_jsonrpc.php');
 define('USER', '');
 define('PASS', '');
 $debug = 0;
