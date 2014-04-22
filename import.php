@@ -3,6 +3,9 @@
 define('URL', 'http://somedomain/zabbix/api_jsonrpc.php');
 define('USER', '');
 define('PASS', '');
+// Choices are 0 - not classified, 1 - information, 2 - warning, 3 - average,
+// 4 - high, and 5 - disaster
+define('PRIORITY', '4');
 $debug = 0;
 
 require('Requests.php');
@@ -78,6 +81,7 @@ function create_trigger($description, $expression) {
         'params' => Array(
             'description' => $description,
             'expression' => $expression,
+            'priority' => PRIORITY,
             ),
         );
 
